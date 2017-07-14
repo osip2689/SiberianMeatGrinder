@@ -8,5 +8,6 @@ public class Cat extends GameObject {
     public Cat(String name) {
         super(name);
         this.legs = 4;
+        this.setHealts(65);
     }
 }

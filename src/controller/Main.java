@@ -1,5 +1,6 @@
 package controller;
 
+import model.npc.Cat;
 import model.npc.Dog;
 import model.npc.GameObject;
 import model.npc.Human;
@@ -9,16 +10,26 @@ public class Main {
 
     public static void main(String[] args) throws InterruptedException {
         GameObject player1 = new Human("Вася");
+        // создаем объект оружие
         Weapon weaponForPlayer1 = new Weapon("Кулак");
+        //устанавливаем
+        weaponForPlayer1.setBonusDamage(0);
         weaponForPlayer1.setDamage(4);
         player1.setWeapon(weaponForPlayer1);
 
         GameObject player2 = new Dog("Шарик");
         Weapon weaponForPlayer2 = new Weapon("Клыки");
+        weaponForPlayer2.setBonusDamage(0.4);
         weaponForPlayer2.setDamage(5);
         player2.setWeapon(weaponForPlayer2);
 
-        fighting(player1, player2);
+        GameObject player3 = new Cat("Кеша");
+        Weapon weaponForPlayer3 = new Weapon("Когти");
+        weaponForPlayer3.setBonusDamage(0.3);
+        weaponForPlayer3.setDamage(7);
+        player3.setWeapon(weaponForPlayer3);
+
+        fighting(player1, player3);
     }
 
     public static GameObject fighting(GameObject g1, GameObject g2) throws InterruptedException {

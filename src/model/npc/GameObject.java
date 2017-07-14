@@ -38,7 +38,10 @@ public class GameObject {
 
     public GameObject strike(GameObject gameObject) {
         int damage = this.getWeapon().getDamage();
-        if (Math.random() > 0.5) {
+
+        double critical = Math.random();
+        double bonusCrit =  + this.getWeapon().getBonusDamage();
+        if (( critical >= (0.5 - bonusCrit)) && (critical <= 0.6)) {
             damage = damage*2;
         }
         gameObject.setHealts(gameObject.getHealts() - damage);
