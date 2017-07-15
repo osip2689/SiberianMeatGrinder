@@ -11,11 +11,9 @@ import java.awt.*;
  */
 public class Player extends GameObject{
 
-    private Coordinates coordinates;
-
     public Player(String name) {
         super(name);
-        coordinates = new Coordinates(225, 225);
+        setCoordinates(new Coordinates(225, 225));
     }
 
     @Override
@@ -23,8 +21,8 @@ public class Player extends GameObject{
         ImageIcon icon2 = new ImageIcon(Player.class.getResource("playerM.gif"));
         //if (this.isSelect()) {icon2 = new ImageIcon(Player.class.getResource("playerM.gif"));}
 
-        int leftUpperCornerX = coordinates.getX();
-        int leftUpperCornerY = coordinates.getY();
+        int leftUpperCornerX = getCoordinates().getX();
+        int leftUpperCornerY = getCoordinates().getY();
         graphics.drawImage(icon2.getImage(), leftUpperCornerX, leftUpperCornerY, null);
     }
 }

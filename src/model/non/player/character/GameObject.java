@@ -1,6 +1,7 @@
 package model.non.player.character;
 
 
+import model.game.process.data.Coordinates;
 import model.games.items.Weapon;
 
 import java.awt.*;
@@ -9,6 +10,8 @@ public abstract class GameObject {
     private String name;
     private int healts;
     private Weapon weapon;
+
+    private Coordinates coordinates;
 
     public GameObject(String name) {
         this.name = name;
@@ -52,5 +55,13 @@ public abstract class GameObject {
 
         System.out.println(gameObject.getName() + " ПОТЕРЯЛ " + damage + " ОЧКОВ ЗДОРОВЬЯ. У НЕГО ОСТАЛОСЬ " + gameObject.getHealts());
         return gameObject;
+    }
+
+    public Coordinates getCoordinates() {
+        return coordinates;
+    }
+
+    public void setCoordinates(Coordinates coordinates) {
+        this.coordinates = coordinates;
     }
 }

@@ -2,6 +2,7 @@ package view;
 
 
 import controller.GameController;
+import model.game.process.GameProcess;
 
 import javax.swing.*;
 
@@ -13,6 +14,8 @@ public class ViewGame extends JFrame
 {
     private GameController controller;  // поле контроллера
     private FieldGame field;            // поле панели представления
+
+    private GameProcess gameProcess = GameProcess.getInstance();
 
     public ViewGame(GameController controller) {
         this.controller = controller;
@@ -47,5 +50,9 @@ public class ViewGame extends JFrame
     public void update()
     {
         field.repaint();
+    }
+
+    public GameProcess getGameProcess() {
+        return gameProcess;
     }
 }

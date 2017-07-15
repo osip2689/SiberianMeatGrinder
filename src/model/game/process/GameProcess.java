@@ -9,6 +9,7 @@ import controller.GameEventListener;
  */
 public class GameProcess {
     private GameEventListener gameEventListener;
+    private GameObjects gameObjects = GameObjects.getInstance();
 
     private static volatile GameProcess instance;
 
@@ -28,4 +29,7 @@ public class GameProcess {
         return localInstance;
     }
 
+    public GameObjects getGameObjects() {
+        return gameObjects;
+    }
 }
