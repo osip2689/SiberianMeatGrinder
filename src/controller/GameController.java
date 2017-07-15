@@ -17,6 +17,8 @@ public class GameController implements GameEventListener {
 
         this.view = new ViewGame(this);        // создаем представление с текущим контроллером
         this.view.init();                               // инициализируем представление
+
+        while (true) view.update();
     }
 
 

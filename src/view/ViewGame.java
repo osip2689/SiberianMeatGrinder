@@ -30,7 +30,7 @@ public class ViewGame extends JFrame
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         //  установка размеров представления
-        setSize(490, 600);
+        setSize(500, 500);
 
         //  установка положения при запуске
         setLocationRelativeTo(null);
@@ -38,7 +38,14 @@ public class ViewGame extends JFrame
         //  подпись окна
         setTitle("SiberianMeatGrinder");
 
+        setResizable(false);
+
         //  видимость
         setVisible(true);
+    }
+
+    public void update()
+    {
+        field.repaint();
     }
 }

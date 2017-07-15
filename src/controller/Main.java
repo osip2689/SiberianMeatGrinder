@@ -1,9 +1,9 @@
 package controller;
 
-import model.npc.Cat;
-import model.npc.Dog;
-import model.npc.GameObject;
-import model.npc.Human;
+import model.non.player.character.Cat;
+import model.non.player.character.Dog;
+import model.non.player.character.GameObject;
+import model.non.player.character.Human;
 import model.games.items.Weapon;
 
 public class Main {

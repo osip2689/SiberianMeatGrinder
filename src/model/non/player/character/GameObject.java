@@ -1,9 +1,11 @@
-package model.npc;
+package model.non.player.character;
 
 
 import model.games.items.Weapon;
 
-public class GameObject {
+import java.awt.*;
+
+public abstract class GameObject {
     private String name;
     private int healts;
     private Weapon weapon;
@@ -11,6 +13,8 @@ public class GameObject {
     public GameObject(String name) {
         this.name = name;
     }
+
+    public abstract void draw(Graphics graphics);
 
     public String getName() {
         return name;
@@ -40,9 +44,9 @@ public class GameObject {
         int damage = this.getWeapon().getDamage();
 
         double critical = Math.random();
-        double bonusCrit =  + this.getWeapon().getBonusDamage();
-        if (( critical >= (0.5 - bonusCrit)) && (critical <= 0.6)) {
-            damage = damage*2;
+        double bonusCrit = +this.getWeapon().getBonusDamage();
+        if ((critical >= (0.5 - bonusCrit)) && (critical <= 0.6)) {
+            damage = damage * 2;
         }
         gameObject.setHealts(gameObject.getHealts() - damage);
 

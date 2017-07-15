@@ -1,5 +1,7 @@
-package model.npc;
+package model.non.player.character;
 
+
+import java.awt.*;
 
 public class Human extends GameObject {
 
@@ -9,5 +11,10 @@ public class Human extends GameObject {
         super(name);
         this.legs = 2;
         this.setHealts(100);
+    }
+
+    @Override
+    public void draw(Graphics graphics) {
+
     }
 }
