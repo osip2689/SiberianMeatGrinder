@@ -4,7 +4,7 @@ import model.npc.Cat;
 import model.npc.Dog;
 import model.npc.GameObject;
 import model.npc.Human;
-import model.gamesItems.Weapon;
+import model.games.items.Weapon;
 
 public class Main {
 

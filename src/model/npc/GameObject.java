@@ -1,7 +1,7 @@
 package model.npc;
 
 
-import model.gamesItems.Weapon;
+import model.games.items.Weapon;
 
 public class GameObject {
     private String name;

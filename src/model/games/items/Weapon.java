@@ -1,4 +1,4 @@
-package model.gamesItems;
+package model.games.items;
 
 
 public class Weapon {
