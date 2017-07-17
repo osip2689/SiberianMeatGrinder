@@ -18,7 +18,7 @@ public class Player extends GameObject{
 
     @Override
     public void draw(Graphics graphics) {
-        ImageIcon icon2 = new ImageIcon(Player.class.getResource("playerM.gif"));
+        ImageIcon icon2 = new ImageIcon(Player.class.getResource("PlayerM.gif"));
         //if (this.isSelect()) {icon2 = new ImageIcon(Player.class.getResource("playerM.gif"));}
 
         int leftUpperCornerX = getCoordinates().getX();
